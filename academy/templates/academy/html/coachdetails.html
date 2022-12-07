@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coach</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</head>
+<body>
+    {% include 'academy/html/navbar.html'%}
+    <h2 style="text-align:center;color:rgb(136, 23, 212)">Details of Coach</h2>
+
+    <div class="container">
+
+    <table class="table">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Experience</th>
+            <th scope="col">About Coach</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          {% for coach_obj in coach_data %}
+          <tr class="table-secondary">
+              <th>{{coach_obj.Name}}</th>
+              <th>{{coach_obj.Email}}</th>
+              <th>{{coach_obj.phone}}</th>
+              <th>{{coach_obj.Gender}}</th>
+              <th>{{coach_obj.Experience}}</th>
+              <th>{{coach_obj.About_coach}}</th>
+          </tr>
+          {%endfor%}
+
+            
+        </tbody>
+      </table>
+    </div>
+
+    
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</body>
+</html>

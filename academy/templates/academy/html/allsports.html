@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</head>
+<body>
+
+    {% include 'academy/html/navbar.html'%}
+    <h2 style="text-align:center;color:rgb(136, 23, 212)">We provide training for the following sports</h2>
+
+    <div class="container">
+
+    <table class="table">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">AboutSport</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+            {% for sports_obj in sport_data %}
+            <tr class="table-secondary">
+                <th>{{sports_obj.Sport_name}}</th>
+                <th>{{sports_obj.Sport_type}}</th>
+                <th>{{spots_obj.Description}}</th>
+            </tr>
+            {%endfor%}
+        </tbody>
+      </table>
+    </div>
+
+
+
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+</body>
+</html>

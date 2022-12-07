@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>planedetails</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</head>
+<body>
+
+    {% include 'academy/html/navbar.html'%}
+    <h2 style="text-align:center;color:rgb(136, 23, 212)">Membership plan </h2>
+
+    <div class="container">
+
+    <table class="table">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">Name</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Charge</th>
+            <th scope="col">About plan</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+            {% for plan_obj in plan_data %}
+            <tr class="table-secondary">
+                <th>{{plan_obj.plan_name}}</th>
+                <th>{{plan_obj.Duration}}</th>
+                <th>{{plan_obj.charge}}</th>
+                <th>{{plan_obj.Description}}</th>
+               
+            </tr>
+            {%endfor%}
+        </tbody>
+      </table>
+    </div>
+
+    
+
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</body>
+</html>

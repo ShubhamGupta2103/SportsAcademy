@@ -1,0 +1,23 @@
+body
+{
+    /* background-color:cornflowerblue; */
+    background-image:linear-gradient(to right,cyan,white)
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+}
+/* pseudo classes */
+a.link{
+    color:red;
+}
+a.visited{
+    color:rgb(183, 37, 139);
+}
+a.hover{
+    color:brown;
+    text-decoration:underline;
+}
+a.active{
+    color:rgb(48, 163, 75);
+}
